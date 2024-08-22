@@ -14,8 +14,9 @@
           theme: {
             extend: {
               colors: {
-                main_color : 'rgb(171, 239, 95)',
-                sec_color : 'rgb(73, 73, 73)',
+                main_color :'rgb(33, 33, 33)',
+                btn_color : 'rgb(171, 239, 95)',
+                sec_color : 'rgb(115, 115, 115)',
               }
             }
           }
@@ -26,9 +27,9 @@
 <body>
   <!-- header section -->
   <header>
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 w-11/12 mx-auto mt-4">
         <div class="navbar-start">
-          <div class="dropdown">
+          <div class="dropdown hidden">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,25 +58,28 @@
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">daisyUI</a>
+          <i class="fa-solid fa-arrow-right -rotate-45 p-2 lg:p-3 bg-btn_color rounded-full"></i>
+          <a class="text-2xl p-2 font-bold lg:text-3xl text-main_color">Rinterio</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
+            <li class="text-2xl font-semibold px-4 text-sec_color">Home</li>
+            <li class="text-2xl font-semibold px-4 text-sec_color">Services</li>
+            <li class="text-2xl font-semibold px-4 text-sec_color">Portfolio</li>
+            <li class="text-2xl font-semibold px-4 text-sec_color">Blogs</li>
+            <li class="text-2xl font-semibold px-4 text-sec_color">Contact Us</li>
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn">Button</a>
+          <a class="hidden lg:block">
+            <i class="fa-solid p-3 text-2xl font-semibold text-sec_color fa-cart-plus"></i>
+            <i class="fa-solid p-3 text-2xl font-semibold text-sec_color fa-magnifying-glass"></i>
+
+            <!-- <p class="text-sm">Book Consult</p> -->
+
+
+          </a>
+          <i class="fa-solid fa-bars lg:hidden"></i>
         </div>
       </div>
   </header>
